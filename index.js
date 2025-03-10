@@ -16,7 +16,7 @@ const pool = new Pool({
     ssl: { rejectUnauthorized: false },
 });
 
-// ✅ Test Database Connection
+// Test Database Connection
 app.get("/test-db", async (req, res) => {
     try {
         const result = await pool.query("SELECT NOW()");
@@ -155,5 +155,5 @@ app.delete("/departments/:id", async (req, res) => {
 //  Start the Server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`🚀 API is running on http://localhost:${PORT}`);
+    console.log(` API is running on http://localhost:${PORT}`);
 });
